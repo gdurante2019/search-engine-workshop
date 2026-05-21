@@ -4,15 +4,17 @@ Reference notebook:  https://github.com/alexeygrigorev/build-your-own-search-eng
 Video: https://www.youtube.com/watch?v=nMrGK5QgPVE
 
 ## Overview
-In this workshop, we created a search engine using various methods.  We used the FAQ documents from three DataTalks.Club Zoomcamps:  Data Engineering Zoomcamp, ML Zoomcamp, and MLOps Zoomcamp.    
+In this workshop, we built and compared search algorithms with different tools, including CountVectorizer, TF-IDF, and BERT, using the FAQ documents from three DataTalks.Club Zoomcamps (Data Engineering Zoomcamp, ML Zoomcamp, and MLOps Zoomcamp).  We learned about basic text search, vectorization, semantic search, and more.  Having experience with these fundamental concepts and tools will be valuable for future search engine builds using more advanced tools.  
 
-### Prepare environment
+This notebook provides step-by-step code instructions and explanations of what the code is doing, per instructor Alexey Gregorev.  Taking these notes helped remind me of the key concepts; hopefully they will be useful to anyone who is learning about--or seeking a refresher on--search engine fundamentals. 
 
-First step is to prepare the environment.  I created an environment on my machine, but the instructor used GitHub Codespaces, which is another great option when you don't want to take the time to set up another environment on your machine.  The libraries installed include ```requests```, ```pandas```, ```scikit-learn```, and ```jupyter```.  The next step is to launch jupyter notebook.
+### Prepare Python environment
+
+I prepared an environment on my local machine.  The libraries installed include ```requests```, ```pandas```, ```scikit-learn```, and ```jupyter```.  The instructor used GitHub Codespaces, which is another great option when you don't want to take the time to set up another environment on your machine.  We used Jupyter Notebook. 
 
 ### Text search:  FAQ docs ingestion and exploration
 
-To begin, we need to obtain these documents and then put them into a format that we can use to explore the structure of the content and feed them into models.  Then we will employ different tools of varying levels of sophistication to perform searches.  
+To start, we download the course FAQs and creat a dataframe to explore the data.  We will then vectorize the documents and employ different tools to perform searches.  
 
 
 ```python
