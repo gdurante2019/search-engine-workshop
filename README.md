@@ -1643,9 +1643,6 @@ q.toarray()
 
 ```python
 # Source - https://stackoverflow.com/a/78793583
-# Posted by Leolo, modified by community. See post 'Timeline' for change history
-# Retrieved 2026-05-20, License - CC BY-SA 4.0
-
 np.set_printoptions(legacy='1.25')
 
 query_dict = dict(zip(names, q.toarray()[0]))
@@ -6741,10 +6738,10 @@ X_emb[0] #First document
 
 
 
-    array([ 0.09653577, -0.08208918, -0.10314177, -0.07960414,  0.06937968,
-           -0.05598135,  0.02338104, -0.12403321, -0.23125954,  0.29852645,
-            0.01352854,  0.07994942, -0.07049554, -0.10897166,  0.02320201,
-           -0.02407619])
+    array([ 0.0965322 , -0.08193724, -0.1011735 , -0.0795697 ,  0.06585571,
+           -0.05471329,  0.02697567, -0.13842745, -0.22336616,  0.29226669,
+            0.06798426,  0.05043606, -0.10484331,  0.10102146, -0.03415345,
+           -0.0624549 ])
 
 
 
@@ -6770,10 +6767,10 @@ Q_emb[0]
 
 
 
-    array([ 0.05790502, -0.03847624, -0.05746507, -0.02803457,  0.04068493,
-           -0.05949213,  0.01232728, -0.08103216, -0.16267084,  0.18834738,
-            0.02197308,  0.07589538, -0.0490837 , -0.06763948,  0.04618849,
-           -0.00259065])
+    array([ 0.05790151, -0.03835664, -0.05655668, -0.02779959,  0.03964251,
+           -0.05938598,  0.01451763, -0.08887828, -0.16135637,  0.19085534,
+            0.05824733,  0.0550259 , -0.07492988,  0.07202032, -0.02085136,
+           -0.04032861])
 
 
 
@@ -6788,7 +6785,7 @@ np.dot(X_emb[0], Q_emb[0])
 
 
 
-    0.14557508666124752
+    0.15214070524424617
 
 
 
@@ -6850,18 +6847,18 @@ df.loc[idx]
       <td>The purpose of this document is to capture fre...</td>
     </tr>
     <tr>
-      <th>13</th>
-      <td>data-engineering-zoomcamp</td>
-      <td>General course-related questions</td>
-      <td>Office Hours - I can’t attend the “Office hour...</td>
-      <td>Yes! Every “Office Hours” will be recorded and...</td>
-    </tr>
-    <tr>
-      <th>450</th>
+      <th>436</th>
       <td>machine-learning-zoomcamp</td>
       <td>General course-related questions</td>
-      <td>When does the next iteration start?</td>
-      <td>The course is available in the self-paced mode...</td>
+      <td>Is it going to be live? When?</td>
+      <td>The course videos are pre-recorded, you can st...</td>
+    </tr>
+    <tr>
+      <th>814</th>
+      <td>mlops-zoomcamp</td>
+      <td>+-General course questions</td>
+      <td>What if my answer is not exactly the same as t...</td>
+      <td>Please choose the closest one to your answer. ...</td>
     </tr>
     <tr>
       <th>451</th>
@@ -6871,18 +6868,11 @@ df.loc[idx]
       <td>No, it’s not possible. The form is closed afte...</td>
     </tr>
     <tr>
-      <th>436</th>
+      <th>444</th>
       <td>machine-learning-zoomcamp</td>
       <td>General course-related questions</td>
-      <td>Is it going to be live? When?</td>
-      <td>The course videos are pre-recorded, you can st...</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>data-engineering-zoomcamp</td>
-      <td>General course-related questions</td>
-      <td>Course - Can I follow the course after it fini...</td>
-      <td>Yes, we will keep all the materials after the ...</td>
+      <td>Will I get a certificate if I missed the midte...</td>
+      <td>Yes, it's possible. See the previous answer.</td>
     </tr>
     <tr>
       <th>11</th>
@@ -6892,11 +6882,18 @@ df.loc[idx]
       <td>No, you can only get a certificate if you fini...</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>15</th>
       <td>data-engineering-zoomcamp</td>
       <td>General course-related questions</td>
-      <td>Course - Can I still join the course after the...</td>
-      <td>Yes, even if you don't register, you're still ...</td>
+      <td>Homework - Are late submissions of homework al...</td>
+      <td>No, late submissions are not allowed. But if t...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>data-engineering-zoomcamp</td>
+      <td>General course-related questions</td>
+      <td>Course - Can I follow the course after it fini...</td>
+      <td>Yes, we will keep all the materials after the ...</td>
     </tr>
   </tbody>
 </table>
@@ -6921,8 +6918,8 @@ X_emb[0]
 
 
 
-    array([0.        , 0.        , 0.        , 0.        , 0.        ,
-           0.        , 0.00062595, 0.        , 0.27090652, 0.        ,
+    array([0.12891935, 0.        , 0.        , 0.        , 0.        ,
+           0.        , 0.        , 0.        , 0.        , 0.        ,
            0.        , 0.        , 0.        , 0.        , 0.        ,
            0.        ])
 
@@ -6940,9 +6937,9 @@ Q_emb[0]
 
 
 
-    array([0.        , 0.00242204, 0.        , 0.        , 0.        ,
-           0.        , 0.        , 0.        , 0.1800451 , 0.        ,
-           0.        , 0.        , 0.        , 0.00221717, 0.        ,
+    array([0.08519333, 0.0022465 , 0.        , 0.        , 0.        ,
+           0.        , 0.        , 0.        , 0.        , 0.        ,
+           0.        , 0.        , 0.        , 0.        , 0.00176997,
            0.        ])
 
 
@@ -6987,18 +6984,11 @@ df.loc[idx]
   </thead>
   <tbody>
     <tr>
-      <th>2</th>
+      <th>0</th>
       <td>data-engineering-zoomcamp</td>
       <td>General course-related questions</td>
-      <td>Course - Can I still join the course after the...</td>
-      <td>Yes, even if you don't register, you're still ...</td>
-    </tr>
-    <tr>
-      <th>449</th>
-      <td>machine-learning-zoomcamp</td>
-      <td>General course-related questions</td>
-      <td>The course has already started. Can I still jo...</td>
-      <td>Yes, you can. You won’t be able to submit some...</td>
+      <td>Course - When will the course start?</td>
+      <td>The purpose of this document is to capture fre...</td>
     </tr>
     <tr>
       <th>814</th>
@@ -7008,18 +6998,11 @@ df.loc[idx]
       <td>Please choose the closest one to your answer. ...</td>
     </tr>
     <tr>
-      <th>0</th>
+      <th>2</th>
       <td>data-engineering-zoomcamp</td>
       <td>General course-related questions</td>
-      <td>Course - When will the course start?</td>
-      <td>The purpose of this document is to capture fre...</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>data-engineering-zoomcamp</td>
-      <td>General course-related questions</td>
-      <td>Certificate - Can I follow the course in a sel...</td>
-      <td>No, you can only get a certificate if you fini...</td>
+      <td>Course - Can I still join the course after the...</td>
+      <td>Yes, even if you don't register, you're still ...</td>
     </tr>
     <tr>
       <th>764</th>
@@ -7029,20 +7012,6 @@ df.loc[idx]
       <td>If you have submitted two projects (and peer-r...</td>
     </tr>
     <tr>
-      <th>451</th>
-      <td>machine-learning-zoomcamp</td>
-      <td>General course-related questions</td>
-      <td>Can I submit the homework after the due date?</td>
-      <td>No, it’s not possible. The form is closed afte...</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>data-engineering-zoomcamp</td>
-      <td>General course-related questions</td>
-      <td>Course - Can I follow the course after it fini...</td>
-      <td>Yes, we will keep all the materials after the ...</td>
-    </tr>
-    <tr>
       <th>436</th>
       <td>machine-learning-zoomcamp</td>
       <td>General course-related questions</td>
@@ -7050,11 +7019,39 @@ df.loc[idx]
       <td>The course videos are pre-recorded, you can st...</td>
     </tr>
     <tr>
+      <th>449</th>
+      <td>machine-learning-zoomcamp</td>
+      <td>General course-related questions</td>
+      <td>The course has already started. Can I still jo...</td>
+      <td>Yes, you can. You won’t be able to submit some...</td>
+    </tr>
+    <tr>
+      <th>451</th>
+      <td>machine-learning-zoomcamp</td>
+      <td>General course-related questions</td>
+      <td>Can I submit the homework after the due date?</td>
+      <td>No, it’s not possible. The form is closed afte...</td>
+    </tr>
+    <tr>
+      <th>437</th>
+      <td>machine-learning-zoomcamp</td>
+      <td>General course-related questions</td>
+      <td>What if I miss a session?</td>
+      <td>Everything is recorded, so you won’t miss anyt...</td>
+    </tr>
+    <tr>
       <th>450</th>
       <td>machine-learning-zoomcamp</td>
       <td>General course-related questions</td>
       <td>When does the next iteration start?</td>
       <td>The course is available in the self-paced mode...</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>data-engineering-zoomcamp</td>
+      <td>General course-related questions</td>
+      <td>Certificate - Can I follow the course in a sel...</td>
+      <td>No, you can only get a certificate if you fini...</td>
     </tr>
   </tbody>
 </table>
