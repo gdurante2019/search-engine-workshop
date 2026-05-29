@@ -2198,7 +2198,7 @@ index.search(
 
 
 
-#### (See minsearch library that Alexey created to implement the above process)
+#### See minsearch library (https://github.com/alexeygrigorev/minsearch) that Alexey created to implement the above process
 
 
 **Note: Limitations on basic text search**
